@@ -72,7 +72,7 @@ Find out `myfunc` address: <br>
 
 Look at stack frame: <br>
 
-We use 112 bytes 'a' to fill **buff**(100 bytes), **ebp**(4 bytes), **return address(vuln)**(4 bytes), s <br>
+We use 112 bytes 'a' to fill **buff**(100 bytes), **ebp**(4 bytes), **return address(vuln)**(4 bytes), **s**(4 bytes) <br>
 
 `myfunc` **address** <br>
 
