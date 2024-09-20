@@ -55,10 +55,8 @@ Complie by gcc:
 
 <br>
 Run file_del: <br>
+
 `nasm -g -f elf file_del.asm`
-
-<br>
-
 `ld -m elf_i386 -o file_del file_del.o`
 
 <br>
