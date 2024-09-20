@@ -39,6 +39,12 @@ int main(int argc, char* argv[])
     return 0;
 } 
 ```
-Complie by gcc:
+<br>
+
+Complie by gcc: <br>
+
 `gcc -g ctf.c -o ctf.out -fno-stack-protector -mpreferred-stack-boundary=2 `
+
+<br>
+
 ![complie ctf](./imgs/ctf1.png)
