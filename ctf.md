@@ -1,4 +1,4 @@
-## ctf
+## CTF
 Source Code:
 ```
 #include <stdio.h>
@@ -56,3 +56,26 @@ Complie by gcc: <br>
 <br>
 
 ![complie ctf](./imgs/ctf1.png)
+
+<br>
+
+Run `gdb` and `disas myfunc`: <br>
+
+![](./imgs/ctf2.png)
+
+<br>
+
+Find out `myfunc` address: <br> 
+![](./imgs/ctf3.png)
+
+<br>
+
+Look at stack frame: <br>
+
+We use 112 bytes 'a' to fill **buff**(100 bytes), **ebp**(4 bytes), **return address(vuln)**(4 bytes), s <br>
+
+`myfunc` **address** <br>
+
+`0x04081211` **p** values
+`0x44644262` **q** values
+
