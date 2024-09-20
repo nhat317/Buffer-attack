@@ -41,6 +41,14 @@ int main(int argc, char* argv[])
 ```
 <br>
 
+Stack Frame
+
+<br>
+
+![](./imgs/stack_ctf.png)
+
+<br>
+
 Complie by gcc: <br>
 
 `gcc -g ctf.c -o ctf.out -fno-stack-protector -mpreferred-stack-boundary=2 `

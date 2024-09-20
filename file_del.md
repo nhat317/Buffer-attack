@@ -50,6 +50,14 @@ _filename:
 
 <br>
 
+Stack Frame
+
+<br>
+
+![](./imgs/stack_file_del.png)
+
+<br>
+
 Complie by gcc:
 `gcc -g vuln.c -o vuln.out -fno-stack-protector -mpreferred-stack-boundary=2 -z execstack`
 

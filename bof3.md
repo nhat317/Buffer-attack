@@ -24,6 +24,15 @@ void main()
 ```
 <br>
 
+Stack Frame
+
+<br>
+
+![](./imgs/stack_bof3.png)
+
+<br>
+
+
 Complie by gcc: <br>
 `gcc -g bof3.c -o bof3.out -fno-stack-protector -mpreferred-stack-boundary=2 ` 
 <br>

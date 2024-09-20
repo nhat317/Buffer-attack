@@ -29,6 +29,14 @@ void main(int argc, char *argv[])
 ```
 <br>
 
+Stack Frame
+
+<br>
+
+![](./imgs/stack_bof2.png)
+
+<br>
+
 Complie by gcc: <br>
 `gcc -g bof2.c -o bof2.out -fno-stack-protector -mpreferred-stack-boundary=2 ` <br>
 ![complie bof2](./imgs/bof2_1.png)
